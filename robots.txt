@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rinocastiglia.github.io/drive-deduplicator/sitemap.xml
+
