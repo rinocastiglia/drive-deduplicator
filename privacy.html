@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Google Drive Deduplicator Pro</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --card-border: #30363d;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; padding: 40px 20px; }
+        .container { max-width: 860px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 40px; }
+        h1 { font-size: 32px; color: #fff; margin-bottom: 8px; }
+        .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 30px; border-bottom: 1px solid var(--card-border); padding-bottom: 15px; }
+        h2 { font-size: 20px; color: var(--accent-blue); margin-top: 30px; margin-bottom: 12px; }
+        p, li { color: #c9d1d9; font-size: 15px; margin-bottom: 14px; }
+        ul { padding-left: 25px; margin-bottom: 15px; }
+        .highlight-box { background: rgba(56, 139, 253, 0.1); border-left: 4px solid var(--accent-blue); padding: 15px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .google-limited-use { background: rgba(63, 185, 80, 0.1); border-left: 4px solid var(--accent-green); padding: 15px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        a { color: var(--accent-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back-link { display: inline-block; margin-bottom: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-link">&larr; Torna alla Home</a>
+    <h1>Informativa sulla Privacy (Privacy Policy)</h1>
+    <div class="subtitle">Ultimo aggiornamento: 16 Ottobre 2026 | Applicazione: Google Drive Deduplicator Pro | Sviluppatore: Rino Castiglia</div>
+
+    <p>La presente Informativa sulla Privacy descrive come <strong>Google Drive Deduplicator Pro</strong> ("l'Applicazione", "il Software"), sviluppato da <strong>Rino Castiglia</strong>, gestisce le informazioni e i dati degli utenti in relazione all'accesso alle API di Google Drive.</p>
+
+    <div class="google-limited-use">
+        <strong>Dichiarazione di conformità alle norme di Google sui dati utente:</strong><br>
+        L'uso e il trasferimento a qualsiasi altra app da parte di <strong>Google Drive Deduplicator Pro</strong> delle informazioni ricevute dalle API di Google sono conformi alle <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Norme sui dati utente dei servizi API di Google</a>, inclusi i requisiti di <em>Uso limitato</em> (Limited Use Requirements).
+    </div>
+
+    <h2>1. Natura dell'Applicazione (Software 100% Locale)</h2>
+    <p>Google Drive Deduplicator Pro è un software standalone per ambiente Windows che viene eseguito <strong>esclusivamente in locale sul computer dell'utente</strong>. Il software non dispone di server backend proprietari o cloud esterni. Nessun dato, file, credenziale o metadato viene mai inviato o salvato su server terzi o controllati dallo sviluppatore.</p>
+
+    <h2>2. Dati Google Raccolti e Autorizzazioni Utilizzate</h2>
+    <p>L'Applicazione richiede l'autorizzazione di accesso tramite protocollo standard OAuth 2.0 alle API ufficiali di Google Drive (ambito: <code>https://www.googleapis.com/auth/drive</code>). Nello specifico, il software legge esclusivamente:</p>
+    <ul>
+        <li><strong>Metadati dei file:</strong> Nome del file, dimensione in byte, hash crittografico MD5 calcolato da Google, data di modifica, ID del file e ID della cartella genitore.</li>
+        <li><strong>Informazioni di base sulla quota:</strong> Spazio totale e spazio utilizzato nell'account Google Drive per mostrare il grafico di archiviazione all'utente.</li>
+        <li><strong>Email e nome visualizzato:</strong> Esclusivamente per mostrare all'utente l'account attualmente collegato nella barra superiore dell'interfaccia.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>Importante (Zero Download dei Contenuti):</strong> L'applicazione <u>NON scarica, non legge e non analizza mai</u> il contenuto interno o il corpo dei tuoi documenti, immagini o archivi. Il confronto per identificare copie identiche avviene matematicamente tramite l'hash crittografico MD5 fornito direttamente dai server di Google.
+    </div>
+
+    <h2>3. Finalità dell'Uso dei Dati</h2>
+    <p>I metadati letti vengono utilizzati per le seguenti finalità:</p>
+    <ul>
+        <li>Raggruppare i file identici al 100% (stessa dimensione in byte e stesso hash MD5).</li>
+        <li>Identificare la copia originale più vecchia, che rimane intatta nella sua cartella.</li>
+        <li>Spostare le copie duplicate superflue nella cartella speciale <code>_DUPLICATI_DA_REVISIONARE</code> creata direttamente nella root del Google Drive dell'utente, mediante aggiornamento dei puntatori di cartella (chiamata API <code>files.update</code> con <code>addParents</code> e <code>removeParents</code>).</li>
+    </ul>
+
+    <h2>4. Politica di Non Cancellazione e Controllo Utente</h2>
+    <p>L'Applicazione adotta una rigorosa <strong>politica di zero cancellazioni automatiche</strong>: il software non invia mai comandi di cancellazione permanente (<code>files.delete</code>) né di invio al cestino. I file duplicati vengono esclusivamente isolati nella cartella di revisione. Spetta sempre all'utente la decisione finale se ed eliminare i file dal proprio account Google.</p>
+
+    <h2>5. Conservazione e Sicurezza dei Dati</h2>
+    <ul>
+        <li><strong>Token di accesso OAuth:</strong> Vengono memorizzati esclusivamente in locale sul personal computer dell'utente nel file <code>token.json</code> con crittografia del sistema operativo. L'utente può disconnettere o revocare l'accesso in qualsiasi momento con il tasto "Cambia Utente" o tramite la pagina delle <a href="https://myaccount.google.com/permissions" target="_blank">Autorizzazioni dell'account Google</a>.</li>
+        <li><strong>Indice SQLite:</strong> L'indice locale dei metadati (<code>drive_index.db</code>) risiede unicamente sul disco fisso dell'utente e può essere azzerato in qualsiasi momento tramite il pulsante "Reset Indice Locale".</li>
+    </ul>
+
+    <h2>6. Nessuna Condivisione o Vendita di Dati</h2>
+    <p>Lo sviluppatore garantisce che:</p>
+    <ul>
+        <li>Nessun dato ricavato dalle API di Google viene venduto o concesso in licenza a terzi.</li>
+        <li>Nessun dato viene utilizzato per scopi pubblicitari o di profilazione.</li>
+        <li>Nessun dato viene impiegato per l'addestramento di modelli di intelligenza artificiale o machine learning generalizzati.</li>
+        <li>Nessun dato viene condiviso con terze parti, salvo richiesta obbligatoria per legge.</li>
+    </ul>
+
+    <h2>7. Diritti dell'Utente</h2>
+    <p>Gli utenti hanno il pieno controllo sui propri dati in qualsiasi momento:</p>
+    <ul>
+        <li>Possono cancellare l'indice locale e i file di registro direttamente dall'applicazione.</li>
+        <li>Possono revocare le autorizzazioni concesse all'applicazione in qualsiasi momento direttamente dalle impostazioni di sicurezza del proprio account Google: <a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a>.</li>
+    </ul>
+
+    <h2>8. Contatti e Titolare del Trattamento</h2>
+    <p>Per qualsiasi domanda, richiesta di chiarimento o esercizio dei diritti in merito alla presente informativa, è possibile contattare direttamente lo sviluppatore:</p>
+    <p>
+        <strong>Rino Castiglia</strong><br>
+        Email: <a href="mailto:rino.castiglia@gmail.com">rino.castiglia@gmail.com</a><br>
+        Progetto: Google Drive Deduplicator Pro
+    </p>
+
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--card-border); font-size: 13px; color: var(--text-muted); text-align: center;">
+        <a href="index.html">Home</a> | <a href="terms.html">Termini di Servizio</a> | Google Drive Deduplicator Pro &copy; 2026 Rino Castiglia
+    </div>
+</div>
+
+</body>
+</html>
+

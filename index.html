@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Deduplicator Pro - by Rino Castiglia</title>
+    <meta name="description" content="Software standalone Windows per la deduplicazione sicura e ultra-veloce di Google Drive fino a oltre 4 TB a zero download.">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --card-border: #30363d;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent-blue: #388bfd;
+            --accent-green: #238636;
+            --accent-green-hover: #2ea043;
+            --accent-orange: #f0883e;
+            --accent-red: #f85149;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+        header { border-bottom: 1px solid var(--card-border); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: #161b22; }
+        .logo { font-size: 20px; font-weight: bold; color: #fff; display: flex; align-items: center; gap: 10px; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 20px; font-size: 14px; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+        .hero { text-align: center; padding: 70px 20px 50px; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 18px; line-height: 1.2; background: linear-gradient(135deg, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 18px; color: var(--text-muted); margin-bottom: 30px; }
+        .cta-btn { display: inline-block; background: var(--accent-green); color: #fff; padding: 15px 35px; border-radius: 8px; font-size: 18px; font-weight: bold; text-decoration: none; transition: background 0.2s, transform 0.1s; box-shadow: 0 4px 15px rgba(35, 134, 54, 0.4); }
+        .cta-btn:hover { background: var(--accent-green-hover); transform: translateY(-2px); }
+        .container { max-width: 1080px; margin: 0 auto; padding: 40px 20px; }
+        .grid-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 30px; }
+        .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 25px; transition: border-color 0.2s; }
+        .card:hover { border-color: var(--accent-blue); }
+        .card h3 { font-size: 20px; margin-bottom: 12px; color: #fff; display: flex; align-items: center; gap: 8px; }
+        .card p { color: var(--text-muted); font-size: 14px; }
+        .safety-box { background: rgba(56, 139, 253, 0.1); border: 1px solid var(--accent-blue); border-radius: 10px; padding: 30px; margin: 50px 0; }
+        .safety-box h2 { font-size: 24px; margin-bottom: 15px; color: #58a6ff; }
+        .safety-box ul { list-style: none; }
+        .safety-box li { padding: 8px 0; color: #c9d1d9; font-size: 15px; display: flex; align-items: flex-start; gap: 10px; }
+        footer { border-top: 1px solid var(--card-border); text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 13px; margin-top: 60px; background: #161b22; }
+        footer a { color: var(--accent-blue); text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            🔺 Drive Deduplicator Pro
+        </div>
+        <div class="nav-links">
+            <a href="#funzionalita">Funzionalità</a>
+            <a href="#sicurezza">Sicurezza</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Termini di Servizio</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Trova e Isola i Duplicati su Google Drive a Zero Download</h1>
+        <p>Software standalone per Windows ad altissime prestazioni per analizzare account Google Drive fino a oltre 4 TB e 750.000 file in pochi minuti, senza consumare la tua connessione internet.</p>
+        <a href="https://gumroad.com" target="_blank" class="cta-btn">🚀 Acquista Licenza Ufficiale su Gumroad</a>
+        <p style="font-size: 13px; color: #8b949e; margin-top: 12px;">Compatibile con Windows 10 e Windows 11 (64-bit) | Eseguibile Standalone Portatile</p>
+    </section>
+
+    <div class="container">
+        <h2 id="funzionalita" style="text-align: center; font-size: 28px; margin-bottom: 10px;">Caratteristiche Principali</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Progettato per gestire archivi enormi con precisione matematica e massima velocità.</p>
+
+        <div class="grid-features">
+            <div class="card">
+                <h3>⚡ Zero Download Server-Side</h3>
+                <p>Non scarica i tuoi file sul PC. Interroga le API ufficiali Google Drive v3 leggendo l'hash MD5 generato direttamente dai datacenter di Google.</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ 100% Zero Cancellazioni</h3>
+                <p>Il software non cancella mai alcun file. Le copie duplicate vengono solo spostate nella cartella speciale <code>_DUPLICATI_DA_REVISIONARE</code>.</p>
+            </div>
+            <div class="card">
+                <h3>📦 Area di Revisione Sicura</h3>
+                <p>Gli originali più vecchi rimangono intatti nelle loro cartelle. Sarai tu a esaminare i duplicati nel browser e a decidere quando eliminarli per liberare spazio.</p>
+            </div>
+            <div class="card">
+                <h3>🌐 Multilingua Dinamico (5 Lingue)</h3>
+                <p>Interfaccia moderna e intuitiva disponibile in Italiano, English, Español, Français e Deutsch, con cambio lingua istantaneo in meno di 15 ms.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Grafico Quota in Tempo Reale</h3>
+                <p>Grafico proporzionale che visualizza lo spazio occupato dai duplicati, dai file utili, da Gmail/Foto e calcola la stima esatta dello spazio che recupererai.</p>
+            </div>
+            <div class="card">
+                <h3>⏸️ Pausa e Ripresa Istantanea</h3>
+                <p>Puoi interrompere la scansione o lo spostamento in qualsiasi momento. Lo stato viene salvato nel database locale e riparte all'istante dall'ultimo file.</p>
+            </div>
+        </div>
+
+        <div id="sicurezza" class="safety-box">
+            <h2>🛡️ Filosofia di Sicurezza: Nessuna Eliminazione Automatica</h2>
+            <ul>
+                <li>✅ <strong>Gli originali non si toccano:</strong> I file originali più vecchi rimangono rigorosamente intatti nelle loro posizioni di origine.</li>
+                <li>✅ <strong>Nessuna cancellazione arbitraria:</strong> Il software effettua solo operazioni di spostamento. Non chiama mai le API di cancellazione di Google.</li>
+                <li>✅ <strong>Controllo totale all'utente:</strong> Un comodo tasto nell'app apre la cartella di revisione su Google Drive nel browser, lasciando a te la decisione finale di eliminare i file quando vuoi.</li>
+                <li>✅ <strong>Esclusione automatica:</strong> La cartella di revisione viene saltata dalle future scansioni per non creare falsi allarmi o duplicazioni.</li>
+                <li>✅ <strong>Privacy al 100% locale:</strong> L'eseguibile gira interamente sul tuo PC locale. Nessun file, credenziale o dato viene trasmesso a server terzi o esterni.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Google Drive Deduplicator Pro</strong> &copy; 2026 by <strong>Rino Castiglia</strong></p>
+        <p>Contatto e Assistenza: <a href="mailto:rino.castiglia@gmail.com">rino.castiglia@gmail.com</a></p>
+        <p style="margin-top: 15px;">
+            <a href="privacy.html">Norme sulla Privacy (Privacy Policy)</a> | 
+            <a href="terms.html">Termini di Servizio (Terms of Service)</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 11px; color: #6e7681;">
+            Google Drive è un marchio registrato di Google LLC. Questa applicazione è un software indipendente sviluppato da Rino Castiglia e conforme alle norme per i dati utente delle API di Google.
+        </p>
+    </footer>
+
+</body>
+</html>
+
